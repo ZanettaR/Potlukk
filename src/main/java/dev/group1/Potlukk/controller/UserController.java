@@ -21,7 +21,7 @@ public class UserController {
     }
 
     // Update User
-    @PutMapping("/users{id}")
+    @PutMapping("/users/{id}")
     @ResponseBody
     public User putUser(@PathVariable int id){
         return null;

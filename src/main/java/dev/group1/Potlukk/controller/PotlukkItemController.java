@@ -19,7 +19,7 @@ public class PotlukkItemController {
     public List<Item> getItemsByPotlukk(@PathVariable int id){
         return null;
     }
-    
+
     // Add an item to a potlukk (nested)
     @PostMapping("/potlukk/{id}/items")
     public Item postItemToPotlukk(){
