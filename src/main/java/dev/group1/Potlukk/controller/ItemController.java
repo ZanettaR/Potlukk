@@ -1,6 +1,7 @@
 package dev.group1.Potlukk.controller;
 
 import dev.group1.Potlukk.entities.Item;
+import dev.group1.Potlukk.utilities.Status;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,19 +21,9 @@ public class ItemController {
         return null;
     }
 
-    // Change status methods
-    @PatchMapping("/items/{id}/wanted")
-    public Item patchWanted(@PathVariable int id){
-        return null;
-    }
-
-    @PatchMapping("/items/{id}/needed")
-    public Item patchNeeded(@PathVariable int id){
-        return null;
-    }
-
-    @PatchMapping("/items/{id}/fulfilled")
-    public Item patchFulfilled(@PathVariable int id){
+    // Change status
+    @PatchMapping("/items/{id}/{status}")
+    public Item patchStatus(@PathVariable int id, @PathVariable Status status){
         return null;
     }
 
