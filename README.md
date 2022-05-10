@@ -1,4 +1,4 @@
-#Project 2: Potlukk
+# Project 2: Potlukk
 
 ### Team 1:
 Igor Gonevski, Grayson Howard, Matt Matthias, Zanetta Tyler
