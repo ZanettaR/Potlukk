@@ -15,7 +15,7 @@ public class UserController {
     }
 
     // Get a user
-    @GetMapping("/user/{id}")
+    @GetMapping("/users/{id}")
     public User getUserByID(@PathVariable int id){
         return null;
     }
@@ -28,7 +28,7 @@ public class UserController {
     }
 
     // Remove a user
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/users/{id}")
     @ResponseBody
     public void deleteUser(@PathVariable int id){
 

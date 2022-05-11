@@ -15,13 +15,13 @@ public class PotlukkItemController {
 
     // Look at a potlukks items
     // Should be able to sort/get by status
-    @GetMapping("/potlukk/{id}/items")
+    @GetMapping("/potlukks/{id}/items")
     public List<Item> getItemsByPotlukk(@PathVariable int id){
         return null;
     }
 
     // Add an item to a potlukk (nested)
-    @PostMapping("/potlukk/{id}/items")
+    @PostMapping("/potlukks/{id}/items")
     public Item postItemToPotlukk(){
         return null;
     }

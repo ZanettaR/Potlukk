@@ -33,13 +33,13 @@ public class PotlukkController {
     }
 
     // Update Potlukk
-    @PutMapping("/potlukk/{id}")
+    @PutMapping("/potlukks/{id}")
     public Potlukk putPotlukk(@PathVariable int id){
         return null;
     }
 
     // Delete a potlukk
-    @DeleteMapping("potlukk/{id}")
+    @DeleteMapping("potlukks/{id}")
     public void deletePotlukk(@PathVariable int id){
 
     }
