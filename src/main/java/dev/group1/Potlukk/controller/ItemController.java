@@ -16,7 +16,7 @@ public class ItemController {
     }
 
     // Update Item
-    @PutMapping("/items{id}")
+    @PutMapping("/items/{id}")
     public Item putItem(@PathVariable int id){
         return null;
     }
