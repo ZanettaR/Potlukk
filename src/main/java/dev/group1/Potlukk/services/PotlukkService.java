@@ -12,14 +12,14 @@ public interface PotlukkService {
 
     Potlukk updatePotlukk(Potlukk potlukk);
 
-    boolean deletePotlukkById(int id) throws PotlukkNotFoundException;
+    boolean deletePotlukkById(int id);
 
-    boolean addPotlukkItem(Item item) throws PotlukkNotFoundException;
+    boolean addPotlukkItem(Item item);
 
-    Potlukk getPotlukkById(int id) throws PotlukkNotFoundException;
+    Potlukk getPotlukkById(int id);
 
     List<Potlukk> getAllPotlukks();
 
-    List<Item> getPotlukkItems(int id) throws PotlukkNotFoundException;
+    List<Item> getPotlukkItems(int id);
 
 }

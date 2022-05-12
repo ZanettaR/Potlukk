@@ -35,7 +35,7 @@ public class PotlukkServiceTests {
     @Disabled
     @Order(2)
     @DisplayName("Should update potlukk")
-    void shouldUpdatePotlukk() throws PotlukkNotFoundException {
+    void shouldUpdatePotlukk() {
         Potlukk updatedPotlukk = potlukkService.getPotlukkById(id);
         updatedPotlukk.setLocation("Walmart Parking Lot");
         updatedPotlukk = potlukkService.updatePotlukk(updatedPotlukk);
@@ -45,14 +45,14 @@ public class PotlukkServiceTests {
     @Test
     @Order(3)
     @DisplayName("Should get a potlukk by id")
-    void shouldGetAPotlukkById() throws PotlukkNotFoundException {
+    void shouldGetAPotlukkById() {
         Assertions.assertNotNull(potlukkService.getPotlukkById(id));
     }
 
     @Test
     @Order(4)
     @DisplayName("Should add item to potlukk")
-    void shouldAddItemToPotlukk() throws PotlukkNotFoundException {
+    void shouldAddItemToPotlukk() {
         Item item = new Item(0, "Moldy Bread", "Bob", Status.FULFILLED, 0);
         Assertions.assertTrue(potlukkService.addPotlukkItem(item));
         itemRepo.delete(item);
@@ -68,7 +68,7 @@ public class PotlukkServiceTests {
     @Test
     @Order(6)
     @DisplayName("Should get all items from a potlukk")
-    void shouldGetAllItemsFromAPotlukk() throws PotlukkNotFoundException {
+    void shouldGetAllItemsFromAPotlukk() {
         Assertions.assertNotNull(potlukkService.getPotlukkItems(id));
     }
 
@@ -82,7 +82,7 @@ public class PotlukkServiceTests {
     @Test
     @Order(7)
     @DisplayName("Should delete potlukk")
-    void shouldDeletePotlukk() throws PotlukkNotFoundException {
+    void shouldDeletePotlukk() {
         Assertions.assertTrue(potlukkService.deletePotlukkById(id));
     }
 }
