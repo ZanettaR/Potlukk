@@ -1,36 +1,43 @@
 package dev.group1.Potlukk.controller;
 
 import dev.group1.Potlukk.entities.User;
+import dev.group1.Potlukk.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 @Component
 @RestController
+@CrossOrigin("*")
 public class UserController {
+
+    @Autowired
+    private UserService userService;
+
     // Add new user
     @PostMapping("/users")
     @ResponseBody
-    public User postUser(){
-        return null;
+    public User createUser(@RequestBody User user){
+        return this.userService.registerUser(user);
     }
 
     // Get a user
     @GetMapping("/users/{id}")
     public User getUserByID(@PathVariable int id){
-        return null;
+        return this.userService.getUserById(id);
     }
 
     // Update User
     @PutMapping("/users/{id}")
     @ResponseBody
-    public User putUser(@PathVariable int id){
-        return null;
+    public User updateUser(@RequestBody User user){
+        return this.userService.updateUser(user);
     }
 
     // Remove a user
     @DeleteMapping("/users/{id}")
     @ResponseBody
-    public void deleteUser(@PathVariable int id){
-
+    public boolean deleteUser(@PathVariable int id){
+        return this.userService.deleteUserById(id);
     }
 }
