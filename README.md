@@ -3,6 +3,8 @@
 ### Team 1:
 Igor Gonevski, Grayson Howard, Matt Matthias, Zanetta Tyler
 
+[Frontend Repository](https://github.com/GraysonHoward/Potlukk-Frontend)
+
 ## Description
 Your team will be building a potluck app, called Potlukk. Registered users create potlucks. Potlucks are have a list of items that the creator can specify. You will be using agile and DevOps practices. You must have daily standups and utilize Github actions. You can customize the name of the app as well as decide the aesthetic.
 
