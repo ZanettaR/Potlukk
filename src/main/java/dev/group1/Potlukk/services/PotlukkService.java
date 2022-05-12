@@ -2,6 +2,7 @@ package dev.group1.Potlukk.services;
 
 import dev.group1.Potlukk.entities.Item;
 import dev.group1.Potlukk.entities.Potlukk;
+import dev.group1.Potlukk.exceptions.PotlukkNotFoundException;
 
 import java.util.List;
 
