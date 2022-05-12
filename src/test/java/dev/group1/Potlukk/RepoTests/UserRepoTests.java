@@ -1,4 +1,4 @@
-package dev.group1.Potlukk;
+package dev.group1.Potlukk.RepoTests;
 
 import dev.group1.Potlukk.entities.User;
 import dev.group1.Potlukk.repos.UserRepo;

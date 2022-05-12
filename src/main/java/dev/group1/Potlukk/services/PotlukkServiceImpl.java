@@ -28,7 +28,13 @@ public class PotlukkServiceImpl implements PotlukkService{
 
     @Override
     public Potlukk updatePotlukk(Potlukk potlukk) {
-        return potlukkRepo.save(potlukk);
+        Potlukk p = getPotlukkById(potlukk.getId());
+        p.setName(potlukk.getName());
+        p.setLocation(potlukk.getLocation());
+        p.setEpochTime(potlukk.getEpochTime());
+        p.setHostID(potlukk.getHostID());
+        potlukkRepo.save(p);
+        return p;
     }
 
     @Override
