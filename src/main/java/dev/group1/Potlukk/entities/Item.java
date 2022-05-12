@@ -16,13 +16,13 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "item_id")
-    private int id;
+    private int id = 0;
     @Column(name = "description")
-    private String name;
+    private String name = "";
     @Column(name = "supplier")
-    private String supplier;
+    private String supplier = "";
     @Column(name = "status")
-    private Status status;
+    private Status status = null;
     @Column(name = "pid")
-    private int potlukkID;
+    private int potlukkID = 0;
 }
