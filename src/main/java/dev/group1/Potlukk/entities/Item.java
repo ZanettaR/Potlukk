@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
@@ -17,14 +14,15 @@ import javax.persistence.Table;
 @Table(name = "item")
 public class Item {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "item_id")
-    private int id;
+    private int id = 0;
     @Column(name = "description")
-    private String name;
+    private String name = null;
     @Column(name = "supplier")
-    private String supplier;
+    private String supplier = null;
     @Column(name = "status")
-    private Status status;
+    private Status status = null;
     @Column(name = "pid")
-    private int potlukkID;
+    private int potlukkID = 0;
 }
