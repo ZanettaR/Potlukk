@@ -44,9 +44,9 @@ public class ItemServiceImpl implements ItemService{
         Item old = this.getItemById(item.getId());
         // The Item passed to update may be incomplete
         // If no info is provided the old info is fetched and used
-        if(item.getName() == null)
+        if(item.getName() == "")
             item.setName(old.getName());
-        if(item.getSupplier() == null)
+        if(item.getSupplier() == "")
             item.setSupplier(old.getSupplier());
         if(item.getStatus() == null)
             item.setStatus(old.getStatus());

@@ -18,9 +18,9 @@ public class Item {
     @Column(name = "item_id")
     private int id = 0;
     @Column(name = "description")
-    private String name = null;
+    private String name = "";
     @Column(name = "supplier")
-    private String supplier = null;
+    private String supplier = "";
     @Column(name = "status")
     private Status status = null;
     @Column(name = "pid")
