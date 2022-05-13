@@ -5,6 +5,7 @@ import dev.group1.Potlukk.repos.UserRepo;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.util.Assert;
 
 import java.util.Optional;
 
@@ -19,7 +20,7 @@ public class UserRepoTests {
     @Test
     @Order(1)
     public void createUser(){
-        User user = new User(0, "group1", "password");
+        User user = new User(0, "team1", "password");
         this.userRepo.save(user);
         UserRepoTests.id = user.getId();
         System.out.println(user);
@@ -32,7 +33,7 @@ public class UserRepoTests {
         Optional<User> possibleUser = this.userRepo.findById(UserRepoTests.id);
         if(possibleUser.isPresent()){
             User retrievedUser = possibleUser.get();
-            Assertions.assertEquals("group1", retrievedUser.getUsername());
+            Assertions.assertEquals("team1", retrievedUser.getUsername());
 
         }else{
             System.out.println("No user found with id: " + UserRepoTests.id);
@@ -67,5 +68,12 @@ public class UserRepoTests {
         }else{
             System.out.println("No user found with id: " + UserRepoTests.id);
         }
+    }
+
+    @Test
+    @Order(5)
+    public void getUserByUsername(){
+        User user = userRepo.findByUsername("postman01");
+        Assertions.assertEquals("postman01", user.getUsername());
     }
 }
