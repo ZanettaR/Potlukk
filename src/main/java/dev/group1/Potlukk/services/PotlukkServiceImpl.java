@@ -41,7 +41,7 @@ public class PotlukkServiceImpl implements PotlukkService{
     public boolean deletePotlukkById(int id) throws PotlukkNotFoundException {
         Optional<Potlukk> possiblePotlukk = potlukkRepo.findById(id);
         if(possiblePotlukk.isPresent()){
-            this.potlukkRepo.delete(possiblePotlukk.get());
+            potlukkRepo.delete(possiblePotlukk.get());
             return true;
         }else {
             throw new PotlukkNotFoundException(id);
@@ -49,11 +49,10 @@ public class PotlukkServiceImpl implements PotlukkService{
     }
 
     @Override
-    public boolean addPotlukkItem(Item item) throws PotlukkNotFoundException {
+    public Item addPotlukkItem(Item item) throws PotlukkNotFoundException {
         Optional<Potlukk> possiblePotlukk = potlukkRepo.findById(item.getPotlukkID());
         if(possiblePotlukk.isPresent()){
-            itemRepo.save(item);
-            return true;
+            return itemRepo.save(item);
         }else {
             throw new PotlukkNotFoundException(item.getPotlukkID());
         }

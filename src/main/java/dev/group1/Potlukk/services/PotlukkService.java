@@ -2,7 +2,6 @@ package dev.group1.Potlukk.services;
 
 import dev.group1.Potlukk.entities.Item;
 import dev.group1.Potlukk.entities.Potlukk;
-import dev.group1.Potlukk.exceptions.PotlukkNotFoundException;
 
 import java.util.List;
 
@@ -14,7 +13,7 @@ public interface PotlukkService {
 
     boolean deletePotlukkById(int id);
 
-    boolean addPotlukkItem(Item item);
+    Item addPotlukkItem(Item item);
 
     Potlukk getPotlukkById(int id);
 

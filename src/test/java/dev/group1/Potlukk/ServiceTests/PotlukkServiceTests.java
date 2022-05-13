@@ -54,7 +54,7 @@ public class PotlukkServiceTests {
     @DisplayName("Should add item to potlukk")
     void shouldAddItemToPotlukk() {
         Item item = new Item(0, "Moldy Bread", "Bob", Status.FULFILLED, 0);
-        Assertions.assertTrue(potlukkService.addPotlukkItem(item));
+        Assertions.assertNotEquals(0, potlukkService.addPotlukkItem(item).getId());
         itemRepo.delete(item);
     }
 
