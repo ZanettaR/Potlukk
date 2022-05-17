@@ -46,8 +46,6 @@ public class ItemServiceImpl implements ItemService{
         // If no info is provided the old info is fetched and used
         if(item.getName() == "")
             item.setName(old.getName());
-        if(item.getSupplier() == "")
-            item.setSupplier(old.getSupplier());
         if(item.getStatus() == null)
             item.setStatus(old.getStatus());
         if(item.getPotlukkID() == 0){
