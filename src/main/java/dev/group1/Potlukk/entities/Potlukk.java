@@ -19,7 +19,7 @@ public class Potlukk {
     @Column(name = "event_name")
     private String name;
     @Column(name = "date_time")
-    private int epochTime;
+    private long epochTime;
     @Column(name = "host_id")
     private int hostID;
     @Column(name = "event_loc")
